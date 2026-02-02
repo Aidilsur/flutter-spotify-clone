@@ -23,7 +23,7 @@ class SignupPage extends StatelessWidget {
       appBar: BasicAppbar(
         title: SvgPicture.asset(AppVectors.logo, height: 40, width: 40),
       ),
-      body: Padding(
+      body: SingleChildScrollView(
         padding: const EdgeInsets.symmetric(vertical: 50, horizontal: 30),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -118,7 +118,7 @@ class SignupPage extends StatelessWidget {
               Navigator.pushReplacement(
                 context,
                 MaterialPageRoute(
-                  builder: (BuildContext context) => const SigninPage(),
+                  builder: (BuildContext context) => SigninPage(),
                 ),
               );
             },
